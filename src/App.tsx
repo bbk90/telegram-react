@@ -11,6 +11,7 @@ import {
   EllipsisHorizontalIcon,
 } from "@heroicons/react/24/outline";
 import { chatsData } from "./data/chats";
+import NotSelectedChatInfo from "./components/not-selected-chat-info";
 
 function App() {
   return (
@@ -84,11 +85,7 @@ function App() {
         </div>
       </aside>
       <main className="grow min-w-[350px]">
-        <div className="bg-dark-secondary h-full flex justify-center items-center">
-          <span className="bg-dark-main py-1 px-2 rounded-full text-sm">
-            Select a chat to start messaging
-          </span>
-        </div>
+        <NotSelectedChatInfo />
         {/* <div className="border-b border-gray-700 px-3 py-1 flex justify-between">
           <div>UserIcon</div>
           <div className="flex gap-6">
