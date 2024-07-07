@@ -4,16 +4,15 @@ import {
   PhoneIcon,
   ChatBubbleOvalLeftIcon,
   CogIcon,
-  MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
-import {
-  PhoneIcon as PhoneIconOutlined,
-  EllipsisHorizontalIcon,
-} from "@heroicons/react/24/outline";
 import NotSelectedChatInfo from "./components/not-selected-chat-info";
 import ChatList from "./components/chat-list";
+import ChatFeed from "./components/chat-feed";
+import { useContext } from "react";
+import { ChatContext } from "./context/chat-context";
 
 function App() {
+  const { selectedChat } = useContext(ChatContext);
   return (
     <div className="h-screen flex">
       <aside className="hidden border-r border-gray-700 grow max-w-[400px] sm:flex flex-col">
@@ -73,20 +72,7 @@ function App() {
         </div>
       </aside>
       <main className="grow min-w-[350px]">
-        <NotSelectedChatInfo />
-        {/* <div className="border-b border-gray-700 px-3 py-1 flex justify-between">
-          <div>UserIcon</div>
-          <div className="flex gap-6">
-            <PhoneIconOutlined width={24} height={24} stroke="#55A4F8" />
-            <MagnifyingGlassIcon width={24} height={24} fill="#55A4F8" />
-            <EllipsisHorizontalIcon
-              width={24}
-              height={24}
-              stroke="#55A4F8"
-              strokeWidth={2}
-            />
-          </div>
-        </div> */}
+        {selectedChat ? <ChatFeed /> : <NotSelectedChatInfo />}
       </main>
     </div>
   );
