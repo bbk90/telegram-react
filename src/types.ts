@@ -1,17 +1,17 @@
 export interface IChatMessageSender {
-  id: number;
+  id: string;
   name: string;
   icon: string;
 }
 
 export interface IChatMessage {
-  id: number;
+  id: string;
   sender: IChatMessageSender;
   message: string;
 }
 
 export interface IChat {
-  id: number;
+  id: string;
   title: string;
   icon: string;
   messages: IChatMessage[];

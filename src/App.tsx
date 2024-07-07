@@ -10,7 +10,6 @@ import {
   PhoneIcon as PhoneIconOutlined,
   EllipsisHorizontalIcon,
 } from "@heroicons/react/24/outline";
-import { chatsData } from "./data/chats";
 import NotSelectedChatInfo from "./components/not-selected-chat-info";
 import ChatList from "./components/chat-list";
 
