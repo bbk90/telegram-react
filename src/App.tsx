@@ -12,6 +12,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { chatsData } from "./data/chats";
 import NotSelectedChatInfo from "./components/not-selected-chat-info";
+import ChatList from "./components/chat-list";
 
 function App() {
   return (
@@ -42,20 +43,8 @@ function App() {
             />
           </div>
         </div>
-        <div className="grow overflow-y-auto">
-          {chatsData.map((chat) => (
-            <div key={chat.id} className="flex h-24 p-2 gap-4">
-              <img
-                src={chat.chatIconSrc}
-                alt="chatIcon"
-                className="rounded-full"
-              />
-              <div>
-                <p>{chat.title}</p>
-                <p>{chat.lastMessage}</p>
-              </div>
-            </div>
-          ))}
+        <div className="grow overflow-y-auto scrollbar scrollbar-thumb-slate-300 scrollbar-track-dark-main">
+          <ChatList />
         </div>
         <div className="border-t border-gray-700 flex justify-between px-8 py-4">
           <UserCircleIcon
