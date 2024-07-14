@@ -10,6 +10,7 @@ export default {
         ["blue-secondary"]: "#486993",
         ["dark-main"]: "#1A222C",
         ["dark-secondary"]: "#24303F",
+        ["gray-text-secondary"]: "#ABB9C9",
       },
     },
   },

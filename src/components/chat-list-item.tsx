@@ -28,7 +28,9 @@ export default function ChatListItem({
       <img src={iconSrc} alt="chatIcon" className="rounded-full" />
       <div>
         <p className="text-base">{title}</p>
-        <p className="text-sm line-clamp-2">{lastMessage}</p>
+        <p className="text-sm line-clamp-2 text-gray-text-secondary">
+          {lastMessage}
+        </p>
       </div>
     </div>
   );
