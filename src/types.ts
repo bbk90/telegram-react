@@ -8,7 +8,7 @@ export interface User {
   status: "online" | "offline";
   lastSeen: string;
 }
-export type ChatType = "dm | group | channel";
+export type ChatType = "dm" | "group" | "channel";
 
 export interface IChat {
   id: string;

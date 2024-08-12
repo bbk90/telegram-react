@@ -41,10 +41,10 @@ function App() {
             />
           </div>
         </div>
-        <div className="grow overflow-y-auto scrollbar scrollbar-thumb-slate-300 scrollbar-track-dark-main">
+        <div className="flex-1 overflow-y-auto scrollbar scrollbar-thumb-slate-300 scrollbar-track-dark-main">
           <ChatList />
         </div>
-        <div className="border-t border-gray-700 flex justify-between px-8 py-4">
+        <div className="border-t border-gray-700 flex justify-between items-center px-8 h-14">
           <UserCircleIcon
             width={24}
             height={24}
