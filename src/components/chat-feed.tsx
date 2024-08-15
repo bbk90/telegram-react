@@ -9,8 +9,8 @@ import { ChatContext } from "../context/chat-context";
 export default function ChatFeed() {
   const { selectedChat } = useContext(ChatContext);
   return (
-    <div className="flex flex-col h-full">
-      <div className="border-b border-gray-700 px-3 py-1 flex justify-between items-center">
+    <div className="flex h-full flex-col">
+      <div className="flex items-center justify-between border-b border-gray-700 px-3 py-1">
         <div className="flex gap-3">
           <img
             src={selectedChat?.icon}
@@ -37,7 +37,8 @@ export default function ChatFeed() {
         </div>
       </div>
       <div className="flex-1">Chat feed</div>
-      <div className="border-t border-gray-700 h-14">Footer</div>
+      <div className="h-14 border-t border-gray-700">Footer</div>
+      <div className="mx-2 my-5 flex flex-row border bg-slate-50"></div>
     </div>
   );
 }
